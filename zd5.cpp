@@ -2,20 +2,22 @@
 using namespace std;
 
 int main() {
-    int N;
-    long long factorial = 1; 
+    setlocale(LC_ALL, "Russian");
 
-    cin >> N;
-    
-    if (N < 0) {
-        return 1;
+    int n;
+    cin >> n;
+
+    if (n == 5) {
+        cout << "Отлично" << endl;
+    } else if (n == 4) {
+        cout << "Хорошо" << endl;
+    } else if (n == 3) {
+        cout << "Удовлетворительно" << endl;
+    } else if (n == 2 || n == 1) {
+        cout << "Плохо" << endl;
+    } else {
+        cout << "Ошибка" << endl;
     }
-    
-    for (int i = 1; i <= N; i++) {
-        factorial *= i;
-    }
-    
-    cout << factorial << endl;
-    
+
     return 0;
 }
