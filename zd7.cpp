@@ -2,27 +2,32 @@
 using namespace std;
 
 int main() {
-    int N;
-    bool isPrime = true;
-    
-    cin >> N;
-    
-    if (N < 2) {
-        isPrime = false;
-    }
-    
-    for (int i = 2; i < N; i++) {
-        if (N % i == 0) {
-            isPrime = false;
+    setlocale(LC_ALL, "Russian");
+
+    int a, b;
+    int op;
+    cin >> a >> b >> op;
+
+    switch (op) {
+        case 1:
+            cout << a + b << endl;
             break;
-        }
+        case 2:
+            cout << a - b << endl;
+            break;
+        case 3:
+            cout << a * b << endl;
+            break;
+        case 4:
+            if (b == 0) {
+                cout << "Деление на ноль" << endl;
+            } else {
+                cout << a / b << endl;
+            }
+            break;
+        default:
+            cout << "Ошибка" << endl;
     }
-    
-    if (isPrime) {
-        cout << "Простое" << endl;
-    } else {
-        cout << "Не простое" << endl;
-    }
-    
+
     return 0;
 }
