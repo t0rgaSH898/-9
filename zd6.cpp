@@ -2,26 +2,45 @@
 using namespace std;
 
 int main() {
-    int number;
-    int count = 0;
-    
-    cin >> number;
-    
-    if (number == 0) {
-        cout << 0 << endl;
-        return 0;
+    setlocale(LC_ALL, "Russian");
+
+    int n;
+    cin >> n;
+
+    switch (n) {
+        case 0:
+            cout << "Ноль" << endl;
+            break;
+        case 1:
+            cout << "Один" << endl;
+            break;
+        case 2:
+            cout << "Два" << endl;
+            break;
+        case 3:
+            cout << "Три" << endl;
+            break;
+        case 4:
+            cout << "Четыре" << endl;
+            break;
+        case 5:
+            cout << "Пять" << endl;
+            break;
+        case 6:
+            cout << "Шесть" << endl;
+            break;
+        case 7:
+            cout << "Семь" << endl;
+            break;
+        case 8:
+            cout << "Восемь" << endl;
+            break;
+        case 9:
+            cout << "Девять" << endl;
+            break;
+        default:
+            cout << "Ошибка" << endl;
     }
-    
-    if (number < 0) {
-        number = -number;
-    }
-    
-    while (number > 0) {
-        number = number / 10;  
-        count++;               
-    }
-    
-    cout << count << endl;
-    
+
     return 0;
 }
